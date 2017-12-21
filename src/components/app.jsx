@@ -3,11 +3,16 @@ import React, { Component } from 'react';
 import Greeting from './greeting';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Bob',
+    };
+  }
   render() {
     return (
       <div>
-        <Greeting name="John" />
-        <Greeting name="Bob" />
+        <Greeting name={this.state.name} />
       </div>
     );
   }
