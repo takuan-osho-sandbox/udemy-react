@@ -6,12 +6,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Bob',
+      name: 'John',
     };
   }
+
+  handleMouseOver() {
+    this.setState({ name: 'Bob' });
+  }
+
+  andleMouseOut() {
+    this.setState({ name: 'Mike' });
+  }
+
   render() {
     return (
-      <div>
+      <div
+        onMouseOver={() => this.handleMouseOver()}
+        onMouseOut={() => this.handleMouseOut()}
+      >
         <Greeting name={this.state.name} />
       </div>
     );
