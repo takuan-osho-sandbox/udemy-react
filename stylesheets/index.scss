@@ -1,4 +1,8 @@
+$background-color: #eee;
+$text-color: #444;
 
 body {
-  background: #eee;
+  background: $background-color;
+  text-align: center;
+  color: $text-color;
 }
